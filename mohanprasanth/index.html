@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figma project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;0,900;1,200;1,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-panel">
+      <img id="displayImage" class="display-image" src="images/girl.png" alt="Displayed Image">
+      <p id="displayText"></p>
+      <div class="all-images">
+        <img src="images/girl1.png" alt="Image 1" onclick="changeImage('images/girl1.png')">
+        <img src="images/girl2.png" alt="Image 2" onclick="changeImage('images/girl2.png')">
+        <img src="images/girl3.png" alt="Image 3" onclick="changeImage('images/girl3.png')">
+        <img src="images/girl4.png" alt="Image 4" onclick="changeImage('images/girl4.png')">
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <p class="texts">Marmeto</p>
+      <h3>Embrace Sideboard</h3>
+      <div class="product-details">
+        <div>
+          <p id="dynamicPrice" class="price"></p>
+          <span class="price-off" id="discountPercentage" style="margin: 8px 0px"></span>
+        </div>
+        <del class="original-price" id="originalPrice"></del>
+        <hr>
+      </div>
+
+      <div class="color-options">
+        <p class="texts">Choose a color:</p>
+        <div class="colorbox">
+          <div class="color-option" style="background-color: beige" onclick="toggleColor(this)">
+            <span class="checkmark">✓</span>
+          </div>
+          <div class="color-option" style="background-color: yellow" onclick="toggleColor(this)">
+            <span class="checkmark">✓</span>
+          </div>
+          <div class="color-option" style="background-color: lightblue" onclick="toggleColor(this)">
+            <span class="checkmark">✓</span>
+          </div>
+          <div class="color-option" style="background-color:lavender" onclick="toggleColor(this)">
+            <span class="checkmark">✓</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="color-options">
+        <p class="texts">Choose a size:</p>
+        <div class="sizebox">
+          <div class="radiobox">
+            <input type="radio" name="size" id="small" value="small" onclick="toggleSize(this)">
+            <label for="small">Small</label>
+          </div>
+          <div class="radiobox">
+            <input type="radio" name="size" id="medium" value="medium" onclick="toggleSize(this)">
+            <label for="medium">Medium</label>
+          </div>
+          <div class="radiobox">
+            <input type="radio" name="size" id="large" value="large" onclick="toggleSize(this)">
+            <label for="large">Large</label>
+          </div>
+          <div class="radiobox">
+            <input type="radio" name="size" id="Extra Large" value="Extra Large" onclick="toggleSize(this)">
+            <label for="Extra Large">Extra Large</label>
+          </div>
+          <div class="radiobox">
+            <input type="radio" name="size" id="xxl" value="xxl" onclick="toggleSize(this)">
+            <label for="xxl">XXL</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="quantity">
+          <button onclick="decreaseQuantity()">-</button>
+          <span id="quantity">1</span>
+          <button onclick="increaseQuantity()">+</button>
+        </div>
+        <div style="margin: 0px 10px">
+          <button onclick="addToCart()" style="border-radius: 30px" class="cartbutton">
+           <img src="images/cart-icon.svg" class="carticons">  Add to cart
+          </button>
+        </div>
+      </div>
+
+      <div class="selected-options" id="selectedOptions"></div>
+      <hr>
+        <div class="descriptions">
+            <p>The Embrace Sideboard is a stylish wear. With a top cloth<br>designed to provide superior protection and look great, this<br>storage solution is both functional and attractive. It fits<br>seamlessly into any home decor, with clean lines and a<br>timeless look. Crafted from premium materials for a<br>combination of style, durability, and reliability.
+            </p>
+        </div>
+    </div>
+  </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+

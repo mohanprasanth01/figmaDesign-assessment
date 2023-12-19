@@ -1,0 +1,46 @@
+@media only screen and (max-width: 767px) {
+    .main-container {
+      flex-direction: column;
+    }
+    .left-panel {
+      width: 100%;
+    }
+  
+    .right-panel {
+      width: 100%;
+    }
+    .sizebox {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+  
+    .display-image {
+      width: 300px;
+      height: 200px;
+      border-radius: 2px;
+    }
+  
+    .all-images img {
+      width: 100%;
+      height: 60px;
+      cursor: pointer;
+      border-radius: 1px;
+      outline: none;
+    }
+    .buttons button {
+      background-color: #008cba;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .selected-options {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  
